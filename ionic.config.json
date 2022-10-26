@@ -1,0 +1,7 @@
+{
+  "name": "appiot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

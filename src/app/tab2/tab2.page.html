@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Monitoreo</ion-card-title>
+            <ion-card-subtitle>Estatus Actual Planta Principal</ion-card-subtitle>
+          </ion-card-header>
+        <!--
+                AC1_ON: 0,
+      AC2_ON: 0,
+      CMD_OFF_AC1: 0,
+      CMD_OFF_AC2: 0,
+      CMD_ON_AC1: 0,
+      CMD_ON_AC2: 0,
+      DISPARO_AC1: 0,
+      DISPARO_AC2: 0,
+        -->
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <img src="assets/icon/water-pump.png" />
+                </ion-thumbnail>
+                <ion-label>Estado Bomba</ion-label>
+                <ion-toggle slot="end" [enableOnOffLabels]="true" [checked]="dataAWS.AC1_ON" [disabled]="false"></ion-toggle>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="git-commit" slot="start"></ion-icon>
+                <ion-label>Presion</ion-label>
+                <ion-badge slot="end">{{dataAWS.CMD_OFF_AC1}} PSI</ion-badge>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="git-commit" slot="start"></ion-icon>
+                <ion-label>Nivel</ion-label>
+                <ion-badge slot="end">{{dataAWS.CMD_OFF_AC2}} m³</ion-badge>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="git-commit" slot="start"></ion-icon>
+                <ion-label>Potencia Activa</ion-label>
+                <ion-badge slot="end">{{dataAWS.CMD_ON_AC1}} kW</ion-badge>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="git-commit" slot="start"></ion-icon>
+                <ion-label>Temperatura</ion-label>
+                <ion-badge slot="end">{{dataAWS.CMD_ON_AC2}} °C</ion-badge>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="git-commit" slot="start"></ion-icon>
+                <ion-label>Flujo</ion-label>
+                <ion-badge slot="end">{{dataAWS.DISPARO_AC1}} m³/s</ion-badge>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="git-commit" slot="start"></ion-icon>
+                <ion-label>Conductividad</ion-label>
+                <ion-badge slot="end">{{dataAWS.DISPARO_AC2}} µs/cm</ion-badge>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
