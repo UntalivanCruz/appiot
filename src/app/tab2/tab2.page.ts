@@ -47,7 +47,7 @@ export class Tab2Page {
       console.log(this.dataAWS)
       this.webSocketService.interval = setInterval(() => {
        this.webSocketService.getData();
-      }, 4000);
+      }, 10000);
     }
     })
   }
