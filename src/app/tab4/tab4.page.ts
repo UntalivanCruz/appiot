@@ -71,7 +71,7 @@ export class Tab4Page implements OnInit{
             break;
             */
         case 'week':
-            val_max_1 = 8;
+            val_max_1 = 12;
             val_max_2 = 10;
             break;
         /*case 'month':
