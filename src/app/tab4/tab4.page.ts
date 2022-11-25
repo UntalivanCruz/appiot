@@ -29,7 +29,6 @@ export class Tab4Page implements OnInit{
         // Create line chart
         this.createLineChart(this.timescale);
 
-
         // Custom options
         this.chartService.line_chart_option.scales['y']['display'] = true;
         this.chartService.line_chart_option.scales['x']['display'] = true;
@@ -44,6 +43,7 @@ export class Tab4Page implements OnInit{
         },
         maxTicksLimit: 3
         };
+        
         this.line_chart_option.plugins.legend = {
         display: false
         };
