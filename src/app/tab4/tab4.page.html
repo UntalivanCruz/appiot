@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Graficas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Gráficas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+    <div class="ion-padding">
+
+      <ion-card class="ion-card-chart ion-card-chart-default ion-no-margin animate__animated animate__fadeIn">
+        <ion-card-header>
+          <p class="ion-chart-card-title">Aprox.</p>
+          <div>
+            <div>
+              <ion-card-title>188 PSI<ion-icon color="danger" name="caret-up"></ion-icon>
+              </ion-card-title>
+              <ion-card-subtitle>Presion</ion-card-subtitle>
+              <ion-card-title>91 °C<ion-icon color="danger" name="caret-up"></ion-icon>
+              </ion-card-title>
+              <ion-card-subtitle>Temperatura</ion-card-subtitle>
+            </div>
+          </div>
+        </ion-card-header>
+
+        <canvas baseChart [data]="line_chart_data" [options]="line_chart_option" [type]="line_chart_type"
+          class="ion-margin-bottom">
+        </canvas>
+
+        <ion-segment value="day" color="primary" (ionChange)="changeTimescale($event)">
+          <ion-segment-button value="week">
+            <ion-label>Week</ion-label>
+          </ion-segment-button>
+        <!-- <ion-segment-button value="day">
+            <ion-label>Day</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="month">
+            <ion-label>Month</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="year">
+            <ion-label>Year</ion-label>
+          </ion-segment-button>
+          --> 
+        </ion-segment>
+
+      </ion-card>
+
+    </div>
+
+</ion-content>
